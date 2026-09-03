@@ -14,7 +14,7 @@ export default function GithubActivity({ username = "AkkiDevlOops" }) {
         setLoading(true);
 
         const response = await fetch(
-          `/api/github-contribution?username=AkkiDevlOops`
+          `/api/github-contribution?username=${username}`
         );
 
         const data = await response.json();
