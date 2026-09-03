@@ -2,7 +2,10 @@ import ThemeToggle from '../components/ThemeToggle'
 import CommandMenu from "../components/CommandMenu";
 import ProjectEntry from "../components/ProjectEntry";
 import ExperienceEntry from "../components/ExperienceEntry";
-import { profile, experience, projects, skills } from "../data/portfolio";
+import  {TypescriptIcon} from 'react-icons'
+import { profile, experience,link, projects, skills } from "../data/portfolio";
+import GitHubCalendar from 'react-github-calendar';
+import GithubActivity from '../components/github';
 
 
 export default function Home() {
@@ -35,15 +38,16 @@ export default function Home() {
           </div>
           <p id='gray' className="mt-6 text-base leading-relaxed text-muted">{profile.bio}</p>
           </section>
-          <div className='border-t border-b border-white/20 my-4 '>
+          <div className='border-t border-b mt-8 border-white/20 '>
           
-          <h1 className='m-3'>Connect</h1>
-            <div className="mt-6 justify-between flex ">
+          <h1 id='text' className='m-3'>Connect</h1>
+            <div className="my-6 justify-between flex mb-8 ">
             {profile.links.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                target={link.href.startsWith("http") ? "_blank" : undefined}
+                target={link.href}
+                
                 rel="noreferrer"
                 className="text-sm bg-paper rounded-xl p-2 text-black flex items-center justify-center"
               >
@@ -55,28 +59,35 @@ export default function Home() {
         
         
 
-        {/* Experience */}
-        <section id="experience" className="mt-16 scroll-mt-20 sm:mt-24">
-          <h2 className="font-mono text-xs uppercase tracking-wide text-muted">Experience</h2>
-          <div className="mt-4">
-            {experience.map((item) => (
-              <ExperienceEntry key={item.company} item={item} />
-            ))}
-          </div>
+        {/* Acitity */}
+        <section id="experience" className="mt-8 scroll-mt-20 sm:mt-24">
+          <h2  className="font-mono text-xs uppercase tracking-wide text-muted">Activity</h2>
+          <GithubActivity/>
         </section>
 
         {/* Projects */}
+        <div className='border-t border-b mt-8 border-white/20 '>
         <section id="projects" className="mt-16 scroll-mt-20 sm:mt-24">
+          
           <h2 className="font-mono text-xs uppercase tracking-wide text-muted">Projects</h2>
           <div className="mt-4">
-            {projects.map((project) => (
-              <ProjectEntry key={project.name} project={project} />
-            ))}
+            <div className='grid md:grid-cols-2 '>
+            <div className='col-span-1 m-1'>
+              <img className='border border-white/20' src='/hostelHub.png'/>
+               
+              
+
+
+            </div>
+            <div className=' col-span-1 m-1'></div>
+            </div>
           </div>
         </section>
+        </div>
 
         {/* Skills */}
-        <section id="skills" className="mt-16 scroll-mt-20 sm:mt-24">
+        <div className='border-t border-b mt-8 border-white/20 '>
+        <section id="skills" className="mt-16 scroll-mt-20 mb-4 sm:mt-24">
           <h2 className="font-mono text-xs uppercase tracking-wide text-muted">Skills</h2>
           <ul className="mt-4 flex flex-wrap gap-2">
             {skills.map((skill) => (
@@ -89,6 +100,25 @@ export default function Home() {
             ))}
           </ul>
         </section>
+        </div>
+
+
+         {/* Skills */}
+        <div className='border-t border-b mt-8 border-white/20 '>
+        <section id="skills" className="mt-16 scroll-mt-20 mb-4 sm:mt-24">
+          <h2 className="font-mono text-xs uppercase tracking-wide text-muted">Achievement</h2>
+          <ul className="mt-4 flex flex-wrap gap-2">
+            {skills.map((skill) => (
+              <li
+                key={skill}
+                className="rounded-full border border-surface px-3 py-1.5 text-sm text-muted"
+              >
+                {skill}
+              </li>
+            ))}
+          </ul>
+        </section>
+        </div>
 
         {/* Footer */}
         <footer className="mt-20 border-t border-surface pt-6 text-xs text-muted sm:mt-28">

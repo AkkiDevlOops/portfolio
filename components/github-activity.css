@@ -1,0 +1,140 @@
+.github-card {
+  width: 100%;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 1rem;
+  padding: 1rem 1rem;
+  color: #f0f6fc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Calendar container */
+
+.github-calendar-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.5rem;
+}
+
+.github-calendar {
+  position: relative;
+  width: min-content;
+  min-width: 100%;
+  padding-top: 2rem;
+}
+
+/* Month names */
+
+.github-months {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  font-size: small;
+  font-weight: 500;
+  color: #f0f6fc;
+}
+
+.github-months span {
+  position: absolute;
+  white-space: nowrap;
+}
+
+/* Contribution grid */
+
+.github-grid {
+  display: flex;
+  gap: 0.17rem;
+}
+
+.github-week {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Individual square */
+
+.github-day {
+  width: 0.5rem;
+  height: 0.5rem;
+  min-width: 0.5rem;
+  border-radius: 0.1rem;
+  box-sizing: border-box;
+  transition: transform 0.1s ease;
+}
+
+.github-day:hover {
+  transform: scale(1.25);
+  outline: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* GitHub-style levels */
+
+.level-0 {
+  background: #161b22;
+}
+
+.level-1 {
+  background: #0e4429;
+}
+
+.level-2 {
+  background: #006d32;
+}
+
+.level-3 {
+  background: #26a641;
+}
+
+.level-4 {
+  background: #39d353;
+}
+
+/* Bottom */
+
+.github-bottom {
+  display: grid;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+}
+
+.github-total {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #f0f6fc;
+  white-space: nowrap;
+}
+
+.github-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  color: #8b949e;
+  white-space: nowrap;
+}
+
+.legend-box {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.1rem;
+}
+
+/* Mobile */
+
+/* @media (max-width: 600px) {
+  .github-card {
+    padding: 16px 12px;
+  }
+
+  .github-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+} */
