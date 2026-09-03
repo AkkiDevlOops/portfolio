@@ -52,7 +52,7 @@ export default function CommandMenu() {
           onClick={() => setOpen(false)}
         >
           <Command
-            className="w-full max-w-md overflow-hidden rounded-xl border border-surface bg-ink shadow-2xl"
+            className="w-full max-w-md  rounded-xl border border-surface bg-ink shadow-2xl"
             onClick={(e) => e.stopPropagation()}
             label="Command menu"
           >
@@ -61,7 +61,7 @@ export default function CommandMenu() {
               placeholder="Jump to a section..."
               className="w-full border-b border-surface bg-transparent px-4 py-4 text-base text-paper outline-none placeholder:text-muted"
             />
-            <Command.List className="max-h-72 overflow-y-auto p-2">
+            <Command.List className="max-h-72  p-2">
               <Command.Empty className="px-3 py-6 text-center text-sm text-muted">
                 No results.
               </Command.Empty>

@@ -6,11 +6,11 @@ export default function Navbar(){
   return (
     <div className=' top-0 border-b border-white/20 mx-auto max-w-content'>
          <header className="flex sticky top-0 max-w-content z-40  border-surface bg-ink/90 px-5 py-3 backdrop-blur sm:px-8">
-         <div className='col-span-2 flex items-center justify-center'>
-           <span className="font-mono m-2  text-paper"><h1 className='md:text-4xl text-sm'>{profile.name}</h1></span>
+         <div className='w-1/2 flex items-center justify-center'>
+           <span className="font-mono m-2 "><h1 className='md:text-4xl  text-paper text-sm'>{profile.name}</h1></span>
            </div>
-           < div className='col-span-5'></div>
-           <div className="flex items-center gap-5 justify-center col-span-3">
+           < div className='col-span-5 w-1/2'></div>
+           <div className="flex items-center  justify-center ">
              <CommandMenu />
              <ThemeToggle />
            </div>
