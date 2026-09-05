@@ -44,13 +44,31 @@ export const projects = [
 ];
 
 export const skills = [
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "PostgreSQL",
-  "Docker",
-];
+  {
+    name:"React",
+    link:"/react.png",
+  },
+   {
+    name: "Nextjs",
+    link:"/Next.png",
+  },
+  
+   {
+    name: "Node.js",
+    link:"/Nodejs.png",
+  },
+   {
+    name: "PostgresSQL",
+    link:"/SQL.png",
+  },
+  
+   {
+    name: "MongoDB",
+    link:"mongodb.png",
+  }
+  
+]
+
 
 // Pages the command menu can jump to
 export const commandLinks = [

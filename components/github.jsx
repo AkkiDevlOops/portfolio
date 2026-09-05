@@ -32,6 +32,7 @@ export default function GithubActivity({ username = "AkkiDevlOops" }) {
     }
 
     fetchGithubActivity();
+    
   }, [username]);
 
   /*
@@ -100,9 +101,10 @@ export default function GithubActivity({ username = "AkkiDevlOops" }) {
 
           {/* Month labels */}
           <div className="github-months">
-            {months.map((month, index) => (
+            {months.slice(1,13).map((month, index) => (
+              
               <span
-                key={`${month.name}-${index}`}
+                key={`${month.name}-${index + 10}`}
                 style={{
                   left: `${month.index * 11}px`,
                 }}
