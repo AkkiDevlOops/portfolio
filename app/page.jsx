@@ -165,7 +165,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="mt-20 mb-8 border-t border-surface pt-6 text-xs text-muted sm:mt-28">
-          <p>Designed and developed by Pratham Yadav
+          <p>Designed and developed by Akshat Sohani
           © 2026. Built in the open.</p>
         </footer>
       </main>
