@@ -7,27 +7,29 @@ import  {TypescriptIcon} from 'react-icons'
 import { profile, experience,link, projects, skills, skillsLogo } from "../data/portfolio";
 import GitHubCalendar from 'react-github-calendar';
 import GithubActivity from '../components/github';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Link from 'next/link';
 import { darkmode } from '../utils/darkmodeformainpage';
+import { currTheme } from '../utils/darkmode';
 
 
 
 export default function Home() {
 
   const [img,setimg] = useState("/akki1.jpeg");
-  const [dark,setdark] = useState('activated')
+ 
+  
 
 
   return (
-    <div className='mx-2 mt-20 '>
-    <div id='background' className="min-h-[100dvh] pb-4  min-w-full bg-ink text-paper">
-      <div id='border' className='w-full border-b rounded-b-2xl mb-2 border-white/20 border-r border-l mx-auto max-w-content'>
+    <div className='mx-2 mt-20 md:flex md:justify-center '>
+    <div id='background' className="min-h-[100dvh] pb-4  bg-ink text-paper">
+      <div id='border' className='w-full border-b md: rounded-b-2xl mb-2 border-white/20 border-r border-l max-w-content'>
       {/* Nav — stacks tap targets comfortably on narrow screens */}
       <div className='min-w-full fixed top-0 pointer-events-none inset-0'>
      
       </div>
-      <main className="mx-auto  max-w-content px-5  py-5 sm:px-8 sm:py-20">
+      <main className=" max-w-content px-5  py-5 sm:px-8 sm:py-20">
         
         {/* Hero */}
         <section id="about" className="scroll-mt-5  ">
@@ -61,7 +63,7 @@ export default function Home() {
              setimg('/akki1.jpeg')
               console.log("button clicked")
              }
-           }} className='border border-white text-sm  text-muted px-20 rounded-lg'>Hello</button>
+           }} className={`border border-white text-sm ${img === 'Akki3.jpeg' ? 'bg-blue-500 text-white' : 'text-muted'}  px-20 rounded-lg`}>Hello</button>
          </div>
 
           <div className='border-t  mt-8  border-surface '>
@@ -73,31 +75,42 @@ export default function Home() {
           <div id='border' className='border-t border-b mt-8  border-surface '>
           
           <h1 id='text' className='font-mono text-s uppercase mt-8 tracking-wide text-muted '>Connect</h1>
-            <div className="my-6 justify-between flex mb-8 ">
+            <div className=" justify-between p-auto flex mb-8 ">
             
              <a 
               rel="noreferrer"
-                className="text-sm md:w-1/5 bg-paper rounded-xl p-2 text-black flex items-center justify-center"
+              href='https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjsvBtSvgvwCknvVmZwrVNnNchPfPJflcLDbCJkRWDnPHFWnNQKrBvpcVvwTqjWJVbNKlZ'
+                className="text-sm md:w-auto bg-paper rounded-xl p-2 text-black flex items-center justify-center"
               >
               Email
               </a>
               <a 
               rel="noreferrer"
-                className="text-sm md:w-1/5 bg-paper rounded-xl p-2 text-black flex items-center justify-center"
+              href='https://github.com/AkkiDevlOops'
+                className="text-sm md:w-auto bg-paper rounded-xl p-2 text-black flex items-center justify-center"
               >
               Github
               </a>
                <a 
               rel="noreferrer"
-                className="text-sm md:w-1/5 bg-paper rounded-xl p-2 text-black flex items-center justify-center"
+              href='https://www.linkedin.com/in/akki565/'
+                className="text-sm md:w-auto bg-paper rounded-xl p-2 text-black flex items-center justify-center"
               >
               LinkedIn
               </a>
                <a 
+               href=''
               rel="noreferrer"
-                className="text-sm md:w-1/5 bg-paper rounded-xl p-2 text-black flex items-center justify-center"
+                className="text-sm md:w-auto bg-paper rounded-xl p-2 text-black flex items-center justify-center"
               >
               Resume
+              </a>
+              <a 
+               href='https://x.com/full_on_aks'
+              rel="noreferrer"
+                className="text-sm md:w-auto bg-paper rounded-xl p-2 text-black flex items-center justify-center"
+              >
+              Twitter
               </a>
            
           </div>
@@ -124,9 +137,12 @@ export default function Home() {
               <a href="https://hostel-management-wheat-five.vercel.app/" className='inline-block relative z-30 '>
               <img id='border' className='border border-white/20' src='/hostelHub.png'/>
                   </a>
+            </div>
+
+             <div className='col-span-1 m-1'>
               
-
-
+              <p id='border' className='border flex justify-center h-full items-center border-white/20' src='/hostelHub.png'>UPCOMING!!</p>
+                
             </div>
             
          
@@ -145,7 +161,10 @@ export default function Home() {
                 <div className='max-w-content flex items-center border rounded-xl border-surface p-1 px-2' key={skill.name}>
                   <div className='w-5 h-5 mr-1.5'>
                <img  src={skill.link}/>
-               </div><p >{skill.name}</p>
+               </div >
+               <div>
+               <p className={` ${currTheme ? 'text-blue-500' : 'text-black'}`} >{skill.name}</p>
+               </div>
                 </div>
              ))}
           </ul>
@@ -164,9 +183,9 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <footer className="mt-20 mb-8 border-t border-surface pt-6 text-xs text-muted sm:mt-28">
-          <p>Designed and developed by Akshat Sohani
-          © 2026. Built in the open.</p>
+        <footer className="mt-20 mb-8 border-t border-surface pt-6 flex flex-col justify-center items-center text-xs text-surface sm:mt-28">
+          <p>Designed and developed by Akshat Sohani</p>
+         <p> © 2026. Built in the open.</p>
         </footer>
       </main>
       </div>
