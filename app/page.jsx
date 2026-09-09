@@ -34,27 +34,28 @@ export default function Home() {
         {/* Hero */}
         <section id="about" className="scroll-mt-5  ">
           
-          <div className='flex'>
+          <div className='flex md:ml-18'>
             <div className=''>
           <div id='border' className=' w-24 h-24 mx-4 flex flex-col border rounded-md col-span-1 border-white/20 p-1'>
             <img src={img}/>
          
           </div>
           </div>
-          <div className='flex flex-col items-center justify-center'> 
-          <h1 id='text' className="font-mono text-2xl font-medium leading-tight text-paper sm:text-3xl">
+          <div className='flex flex-col  items-center justify-center'> 
+          <h1 ird='text' className="font-mono text-2xl font-medium leading-tight text-paper sm:text-3xl">
             {profile.name}
           </h1>
           <div>
 
           <p className="mt-1 text-sm relative z-75 text-accent">{profile.role}</p>
           
-
+         
           </div>
           </div>
           
+          
           </div>
-          <div className='mt-4 min-w-full flex items-center justify-center'>
+          <div className='mt-4 min-w-full md:justify-normal md:ml-4 flex items-center justify-center'>
            <button  onClick={()=>{
              if(img == '/akki1.jpeg'){
              setimg('Akki3.jpeg');
@@ -63,7 +64,7 @@ export default function Home() {
              setimg('/akki1.jpeg')
               console.log("button clicked")
              }
-           }} className={`border border-white text-sm ${img === 'Akki3.jpeg' ? 'bg-blue-500 text-white' : 'text-muted'}  px-20 rounded-lg`}>Hello</button>
+           }} className={`border border-white text-sm ${img === 'Akki3.jpeg' ? 'bg-blue-500 text-white' : 'text-muted'}  px-20 md:px-8 rounded-lg`}>Hello</button>
          </div>
 
           <div className='border-t  mt-8  border-surface '>
@@ -75,40 +76,40 @@ export default function Home() {
           <div id='border' className='border-t border-b mt-8  border-surface '>
           
           <h1 id='text' className='font-mono text-s uppercase mt-8 tracking-wide text-muted '>Connect</h1>
-            <div className=" justify-between p-auto flex mb-8 ">
+            <div className="flex md:flex-row mb-7 mt-5 justify-between flex-col items-center flex-wrap py-2">
             
              <a 
               rel="noreferrer"
               href='https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjsvBtSvgvwCknvVmZwrVNnNchPfPJflcLDbCJkRWDnPHFWnNQKrBvpcVvwTqjWJVbNKlZ'
-                className="text-sm md:w-auto bg-paper rounded-xl p-2 text-black flex items-center justify-center"
+                className="text-sm px-11 mb-2 bg-paper rounded-xl text-black flex items-center justify-center"
               >
               Email
               </a>
               <a 
               rel="noreferrer"
               href='https://github.com/AkkiDevlOops'
-                className="text-sm md:w-auto bg-paper rounded-xl p-2 text-black flex items-center justify-center"
+                className="text-sm bg-paper rounded-xl px-9 mb-2 text-black flex items-center justify-center"
               >
               Github
               </a>
                <a 
               rel="noreferrer"
               href='https://www.linkedin.com/in/akki565/'
-                className="text-sm md:w-auto bg-paper rounded-xl p-2 text-black flex items-center justify-center"
+                className="text-sm md:w-auto bg-paper rounded-xl px-7 mb-2 text-black flex items-center justify-center"
               >
               LinkedIn
               </a>
                <a 
-               href=''
+               href='https://mega.nz/file/oR1kyZAS#2x2CFfv7Z-LKmv0htCdCwokPWRUhILiQkM3H5vaMzhw'
               rel="noreferrer"
-                className="text-sm md:w-auto bg-paper rounded-xl p-2 text-black flex items-center justify-center"
+                className="text-sm md:w-auto bg-paper rounded-xl px-8 mb-2 text-black flex items-center justify-center"
               >
               Resume
               </a>
               <a 
                href='https://x.com/full_on_aks'
               rel="noreferrer"
-                className="text-sm md:w-auto bg-paper rounded-xl p-2 text-black flex items-center justify-center"
+                className="text-sm md:w-auto bg-paper rounded-xl px-9 mb-2  text-black flex items-center justify-center"
               >
               Twitter
               </a>
