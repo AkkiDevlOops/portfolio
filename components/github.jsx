@@ -101,12 +101,27 @@ export default function GithubActivity({ username = "AkkiDevlOops" }) {
 
           {/* Month labels */}
           <div className="github-months">
-            {months.slice(1,13).map((month, index) => (
-              
+
+             {months.slice(1,2).map((month, index) => (
+             
               <span
-                key={`${month.name}-${index + 10}`}
+                key={`${month.name}-${index}`}
                 style={{
-                  left: `${month.index * 11}px`,
+                  left: `${month.index * 4}px`,
+                  
+                }}
+              >
+                {month.name}
+              </span>
+            ))}
+            
+            {months.slice(2,13).map((month, index) => (
+             
+              <span
+                key={`${month.name}-${index}`}
+                style={{
+                  left: `${month.index * 10}px`,
+                 
                 }}
               >
                 {month.name}

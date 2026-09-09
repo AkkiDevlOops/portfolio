@@ -41,6 +41,7 @@
 
 .github-months span {
   position: absolute;
+  padding-left:0rem;
   white-space: nowrap;
 }
 
