@@ -42,7 +42,7 @@ export default function Home() {
           </div>
           </div>
           <div className='flex flex-col  items-center justify-center'> 
-          <h1 ird='text' className="font-mono text-2xl font-medium leading-tight text-paper sm:text-3xl">
+          <h1 id='text' className="font-mono text-2xl font-medium leading-tight text-paper sm:text-3xl">
             {profile.name}
           </h1>
           <div>
@@ -55,7 +55,7 @@ export default function Home() {
           
           
           </div>
-          <div className='mt-4 min-w-full md:justify-normal md:ml-4 flex items-center justify-center'>
+          <div  className='mt-4 min-w-full md:justify-normal md:ml-4 flex items-center justify-center'>
            <button  onClick={()=>{
              if(img == '/akki1.jpeg'){
              setimg('Akki3.jpeg');
@@ -64,7 +64,7 @@ export default function Home() {
              setimg('/akki1.jpeg')
               console.log("button clicked")
              }
-           }} className={`border border-white text-sm ${img === 'Akki3.jpeg' ? 'bg-blue-500 text-white' : 'text-muted'}  px-20 md:px-8 rounded-lg`}>Hello</button>
+           }}  className={`border border-surface text-sm ${img === 'Akki3.jpeg' ? 'bg-blue-500 text-white' : 'text-muted'}  px-20 md:px-8 rounded-lg`}>Hello</button>
          </div>
 
           <div className='border-t  mt-8  border-surface '>
